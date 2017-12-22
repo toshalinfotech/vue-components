@@ -1,4 +1,4 @@
-# g-components
+# vue-g-components
 > A Vue component to apply input style as Google
 
 **Input**
@@ -12,14 +12,14 @@
 yarn
 
 ```bash
-yarn add g-components
+yarn add vue-g-components
 ```
 
 npm
 
 
 ```bash
-npm install g-components --save
+npm install vue-g-components --save
 ```
 
 ## Setup
@@ -27,7 +27,7 @@ npm install g-components --save
 Register the plugin.
 
 ```js
-import GInput from 'g-components';
+import GInput from 'vue-g-components';
 
 Vue.use(GInput);
 ```
@@ -35,7 +35,7 @@ Vue.use(GInput);
 Or register components manually.
 
 ```js
-import {GInput} from 'g-components';
+import {GInput} from 'vue-g-components';
 
 Vue.component('g-input', GInput);
 ```

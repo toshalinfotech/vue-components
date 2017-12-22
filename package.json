@@ -1,6 +1,6 @@
 {
-  "name": "g-components",
-  "version": "1.0.0",
+  "name": "vue-g-components",
+  "version": "1.0.1",
   "description": "Input component for Vue.js",
   "main": "dist/index.js",
   "files": [
