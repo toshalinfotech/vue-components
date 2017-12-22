@@ -1,0 +1,49 @@
+{
+  "name": "vue-components",
+  "version": "1.0.0",
+  "description": "Input component for Vue.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "webpack -p --progress",
+    "docs": "webpack -p --progress --config docs/webpack.config.js",
+    "docs-watch": "webpack --progress --config docs/webpack.config.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toshalinfotech/vue-components.git"
+  },
+  "keywords": [
+    "Input",
+    "Google Style",
+    "Vue"
+  ],
+  "author": {
+    "name": "Krunal Jariwala",
+    "email": "krunal@idea2working.com",
+    "url": "http://www.toshalinfotech.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toshalinfotech/vue-components/issues"
+  },
+  "homepage": "https://github.com/toshalinfotech/vue-components#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "uglify-js": "^3.2.2",
+    "vue": "^2.5.13",
+    "vue-loader": "^13.6.1",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^3.10.0"
+  }
+}
