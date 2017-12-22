@@ -1,5 +1,5 @@
 {
-  "name": "vue-components",
+  "name": "g-components",
   "version": "1.0.0",
   "description": "Input component for Vue.js",
   "main": "dist/index.js",
