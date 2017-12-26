@@ -1,5 +1,5 @@
 # vue-g-components
-> A Vue component to apply input style as Google
+> A Google style Vue components
 
 **Input**
 

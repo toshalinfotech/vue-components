@@ -1,105 +1,20 @@
 <style lang="scss">
-    @import "../assets/scss/variables";
-    @import "../assets/scss/default";
-
-    .g-wrapper{
-        margin: $default-spacing 0;
-    }
-    .g-inner{
-        position: relative;
-        padding: $default-spacing*2 0 0 0;
-        border-bottom: 2px solid $secondary-color;
-        &.normal{
-            padding: 0;
-        }
-        &:after{
-            content: "";
-            position: absolute;
-            bottom: -2px;
-            height: 2px;
-            background: $primary-color;
-            width: 0%;
-            left: 50%;
-            right: 50%;
-            transition: $default-animation;
-        }
-        &.focused:after{
-            left: 0;
-            right: 0;
-            width: 100%;
-        }
-        &.disabled{
-            opacity: 0.5;
-        }
-        &.disabled,
-        &.disabled .g-input{
-            cursor: not-allowed;
-        }
-        &.animated .g-label{
-            bottom: 32px;
-            font-size: 11px;
-            line-height: 12px;
-        }
-        &.focused .g-label{
-            color: $primary-color;
-        }
-        &.focused.invalid .g-label{
-            color: $danger-color;
-        }
-        &.invalid{
-            border-bottom-color: $danger-color;
-        }
-        &.invalid:after{
-            background: $danger-color;
-        }
-    }
-    .g-val-msg{
-        font-size: $default-font-size;
-        line-height: $default-line-height;
-        color: $danger-color;
-        text-align: left;
-    }
-    .g-label{
-        position: absolute;
-        bottom: 2px;
-        left: 0;
-        width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        font-size: $default-font-size;
-        line-height: $default-line-height;
-        color: darken($default-color, 50%);
-        text-align: left;
-        transition: $default-animation;
-    }
-    .g-input{
-        display: block;
-        width: 100%;
-        background: transparent;
-        border: none;
-        font-size: $default-font-size;
-        line-height: $default-line-height;
-        position: relative;
-        box-shadow: none;
-        &:focus,
-        &:hover{
-            outline: none;
-            box-shadow: none;
-        }
-    }
+    @import "../assets/scss/_variables.scss";
+    @import "../assets/scss/_default.scss";
+    @import "../assets/scss/_input.scss";
 </style>
 
 <template>
     <div class="g-wrapper" v-if="isValidInput">
-        <div class="g-inner"  :id="id" :class="[className, {
+        <div class="g-inner"  :class="[className, {
                 normal: noLabel,
                 animated: hasValue,
                 disabled: disabled,
                 invalid: isInvalid,
                 'animated focused': hasFocus                
             }]">
-            <div class="g-label" v-if="placeholder !== null" v-text="placeholder"></div>
-            <input class="g-input" :type="type" :name="name" :required="required" :pattern="pattern"
+            <label :for="id" class="g-label" v-if="placeholder !== null" v-text="placeholder"></label>
+            <input :id="id" class="g-input" :type="type" :name="name" :required="required" :pattern="pattern"
                 :value="value" :disabled="disabled" :title="validationMessage" :min="min" :max="max" :step="step"
                 @focus="onFocus" @focusout="onFocusOut" @change="onChange($event)" @invalid="onInvalid">
         </div>

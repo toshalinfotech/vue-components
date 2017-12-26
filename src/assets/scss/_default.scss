@@ -6,4 +6,10 @@ body,html{
     font-size: $default-font-size;
     line-height: $default-line-height;
     color: $alternate-color;
+    background: lighten($secondary-color, 10%);
+}
+.skArea{
+    margin: $default-spacing 0;
+    padding: $default-spacing*2;
+    background: $default-color;
 }

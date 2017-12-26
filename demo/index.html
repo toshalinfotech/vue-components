@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Google style vue components demo</title>
+    <meta name="description" content="vue-component docs">
+    <meta name="author" content="Krunal Jariwala">
+    <link rel="stylesheet" href="build/app.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
+</head>
+
+<body>
+<div id="app">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="skArea">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label></label>
+                            <g-input type="text" v-model="inputValue"></g-input>
+                        </div>
+                        <div class="col-sm-8">
+                            <label>Input value: {{inputValue}}</label>
+                            <pre><code>&#x3C;g-input type=&#x22;text&#x22; v-model=&#x22;inputValue&#x22;&#x3E;&#x3C;/g-input&#x3E;</code></pre>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <g-input value="" placeholder="Username"></g-input>
+                        </div>
+                        <div class="col-sm-8">
+                            <label>Placeholder example</label>
+                            <pre><code>&#x3C;g-input value=&#x22;&#x22; placeholder=&#x22;Username&#x22;&#x3E;&#x3C;/g-input&#x3E;</code></pre>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <g-input value="" placeholder="Username" disabled="true"></g-input>
+                        </div>
+                        <div class="col-sm-8">
+                            <label>Disable input example</label>
+                            <pre><code>&#x3C;g-input value=&#x22;&#x22; placeholder=&#x22;Username&#x22; disabled=&#x22;true&#x22;&#x3E;&#x3C;/g-input&#x3E;</code></pre>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <g-input value="Read only Value" placeholder="Username" readonly="true"></g-input>
+                        </div>
+                        <div class="col-sm-8">
+                            <label>Read only value example</label>
+                            <pre><code>&#x3C;g-input value=&#x22;&#x22; placeholder=&#x22;Username&#x22; readonly=&#x22;true&#x22;&#x3E;&#x3C;/g-input&#x3E;</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <footer class="text-center">
+                    © <a href="https://github.com/toshalinfotech">Toshal Infotech</a> - <a href="https://github.com/toshalinfotech/vue-components">Code on Github</a>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="build/app.js"></script>
+</body>
+</html>

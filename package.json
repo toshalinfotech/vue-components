@@ -8,8 +8,8 @@
   ],
   "scripts": {
     "build": "webpack -p --progress",
-    "docs": "webpack -p --progress --config docs/webpack.config.js",
-    "docs-watch": "webpack --progress --config docs/webpack.config.js --watch"
+    "demo": "webpack -p --progress --config demo/webpack.config.js",
+    "demo-watch": "webpack --progress --config demo/webpack.config.js --watch"
   },
   "repository": {
     "type": "git",
