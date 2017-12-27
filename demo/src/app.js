@@ -9,7 +9,11 @@ new Vue({
 
     data() {
         return {
-            inputValue: '',
+            inputExample: "",
+            placeHolderExample: "",
+            disableExample: "toshal.infotech",
+            ValidationExample: "",
+            changeEventExample: ""
         }
     },
 });

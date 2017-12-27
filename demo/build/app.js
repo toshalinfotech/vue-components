@@ -260,7 +260,11 @@ new _vue2.default({
 
     data: function data() {
         return {
-            inputValue: ''
+            inputExample: "",
+            placeHolderExample: "",
+            disableExample: "toshal.infotech",
+            ValidationExample: "",
+            changeEventExample: ""
         };
     }
 });
@@ -11633,7 +11637,7 @@ exports = module.exports = __webpack_require__(11)(undefined);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);", ""]);
 
 // module
-exports.push([module.i, "\nbody, html {\n  padding: 0;\n  margin: 0;\n  font-family: Lato, \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  color: #444444;\n  background: #f4f4f4;\n}\n.skArea {\n  margin: 12px 0;\n  padding: 24px;\n  background: #fff;\n}\n.g-wrapper {\n  margin: 12px 0;\n}\n.g-inner {\n  position: relative;\n  padding: 24px 0 0 0;\n  border-bottom: 2px solid #dadada;\n}\n.g-inner.normal {\n    padding: 0;\n}\n.g-inner:after {\n    content: \"\";\n    position: absolute;\n    bottom: -2px;\n    height: 2px;\n    background: #4285f4;\n    width: 0%;\n    left: 50%;\n    right: 50%;\n    transition: all 0.3s;\n}\n.g-inner.focused:after {\n    left: 0;\n    right: 0;\n    width: 100%;\n}\n.g-inner.disabled {\n    opacity: 0.5;\n}\n.g-inner.disabled,\n  .g-inner.disabled .g-input {\n    cursor: not-allowed;\n}\n.g-inner.animated .g-label {\n    bottom: 32px;\n    font-size: 11px;\n    line-height: 12px;\n}\n.g-inner.focused .g-label {\n    color: #4285f4;\n}\n.g-inner.focused.invalid .g-label {\n    color: #dc3545;\n}\n.g-inner.invalid {\n    border-bottom-color: #dc3545;\n}\n.g-inner.invalid:after {\n    background: #dc3545;\n}\n.g-val-msg {\n  font-size: 14px;\n  line-height: 20px;\n  color: #dc3545;\n  text-align: left;\n}\n.g-label {\n  position: absolute;\n  bottom: 2px;\n  left: 0;\n  width: 100%;\n  margin: 0;\n  padding: 0;\n  white-space: nowrap;\n  overflow: hidden;\n  font-size: 14px;\n  line-height: 20px;\n  font-weight: normal;\n  color: gray;\n  text-align: left;\n  transition: all 0.3s;\n}\n.g-input {\n  display: block;\n  width: 100%;\n  background: transparent;\n  border: none;\n  font-size: 14px;\n  line-height: 20px;\n  font-weight: normal;\n  position: relative;\n  box-shadow: none;\n}\n.g-input:focus, .g-input:hover {\n    outline: none;\n    box-shadow: none;\n}\n", ""]);
+exports.push([module.i, "\nbody, html {\n  padding: 0;\n  margin: 0;\n  font-family: Lato, \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif;\n  font-size: 14px;\n  line-height: 20px;\n  color: #444444;\n  background: #f4f4f4;\n}\n.skArea {\n  margin: 12px 0;\n  padding: 24px;\n  background: #fff;\n}\npre,\ncode,\ncode.hljs {\n  background: #f4f4f4;\n}\n.g-wrapper {\n  margin: 12px 0;\n}\n.g-inner {\n  position: relative;\n  padding: 24px 0 0 0;\n  border-bottom: 2px solid #dadada;\n}\n.g-inner.normal {\n    padding: 0;\n}\n.g-inner:after {\n    content: \"\";\n    position: absolute;\n    bottom: -2px;\n    height: 2px;\n    background: #4285f4;\n    width: 0%;\n    left: 50%;\n    right: 50%;\n    transition: all 0.3s;\n}\n.g-inner.focused:after {\n    left: 0;\n    right: 0;\n    width: 100%;\n}\n.g-inner.disabled {\n    opacity: 0.5;\n}\n.g-inner.disabled,\n  .g-inner.disabled .g-input {\n    cursor: not-allowed;\n}\n.g-inner.animated .g-label {\n    bottom: 32px;\n    font-size: 11px;\n    line-height: 12px;\n}\n.g-inner.focused .g-label {\n    color: #4285f4;\n}\n.g-inner.focused.invalid .g-label {\n    color: #dc3545;\n}\n.g-inner.invalid {\n    border-bottom-color: #dc3545;\n}\n.g-inner.invalid:after {\n    background: #dc3545;\n}\n.g-val-msg {\n  font-size: 14px;\n  line-height: 20px;\n  color: #dc3545;\n  text-align: left;\n}\n.g-label {\n  position: absolute;\n  bottom: 2px;\n  left: 0;\n  width: 100%;\n  margin: 0;\n  padding: 0;\n  white-space: nowrap;\n  overflow: hidden;\n  font-size: 14px;\n  line-height: 20px;\n  font-weight: normal;\n  color: gray;\n  text-align: left;\n  transition: all 0.3s;\n}\n.g-input {\n  display: block;\n  width: 100%;\n  background: transparent;\n  border: none;\n  font-size: 14px;\n  line-height: 20px;\n  font-weight: normal;\n  position: relative;\n  box-shadow: none;\n}\n.g-input:focus, .g-input:hover {\n    outline: none;\n    box-shadow: none;\n}\n", ""]);
 
 // exports
 

@@ -9,6 +9,7 @@
     <meta name="author" content="Krunal Jariwala">
     <link rel="stylesheet" href="build/app.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css" />
 </head>
 
 <body>
@@ -20,41 +21,51 @@
                     <div class="row">
                         <div class="col-sm-4">
                             <label></label>
-                            <g-input type="text" v-model="inputValue"></g-input>
+                            <g-input type="text" v-model="inputExample"></g-input>
                         </div>
                         <div class="col-sm-8">
-                            <label>Input value: {{inputValue}}</label>
-                            <pre><code>&#x3C;g-input type=&#x22;text&#x22; v-model=&#x22;inputValue&#x22;&#x3E;&#x3C;/g-input&#x3E;</code></pre>
+                            <label>Input value: {{inputExample}}</label>
+                            <pre><code>&#x3C;g-input type=&#x22;text&#x22; v-model=&#x22;inputExample&#x22;&#x3E;&#x3C;/g-input&#x3E;</code></pre>
                         </div>
                     </div>
                     <hr/>
                     <div class="row">
                         <div class="col-sm-4">
-                            <g-input value="" placeholder="Username"></g-input>
+                            <g-input v-model="placeHolderExample" placeholder="Username"></g-input>
                         </div>
                         <div class="col-sm-8">
                             <label>Placeholder example</label>
-                            <pre><code>&#x3C;g-input value=&#x22;&#x22; placeholder=&#x22;Username&#x22;&#x3E;&#x3C;/g-input&#x3E;</code></pre>
+                            <pre><code>&#x3C;g-input v-model=&#x22;placeHolderExample&#x22; placeholder=&#x22;Username&#x22;&#x3E;&#x3C;/g-input&#x3E;</code></pre>
                         </div>
                     </div>
                     <hr/>
                     <div class="row">
                         <div class="col-sm-4">
-                            <g-input value="" placeholder="Username" disabled="true"></g-input>
+                            <g-input v-model="disableExample" placeholder="Username" disabled></g-input>
                         </div>
                         <div class="col-sm-8">
                             <label>Disable input example</label>
-                            <pre><code>&#x3C;g-input value=&#x22;&#x22; placeholder=&#x22;Username&#x22; disabled=&#x22;true&#x22;&#x3E;&#x3C;/g-input&#x3E;</code></pre>
+                            <pre><code>&#x3C;g-input v-model=&#x22;disableExample&#x22; placeholder=&#x22;Username&#x22; disabled&#x3E;&#x3C;/g-input&#x3E;</code></pre>
                         </div>
                     </div>
                     <hr/>
                     <div class="row">
                         <div class="col-sm-4">
-                            <g-input value="Read only Value" placeholder="Username" readonly="true"></g-input>
+                            <g-input v-model="ValidationExample" placeholder="Username" pattern="^[a-zA-Z0-9]{4,10}$" validation-message="No Special characters allow!"></g-input>
                         </div>
                         <div class="col-sm-8">
-                            <label>Read only value example</label>
-                            <pre><code>&#x3C;g-input value=&#x22;&#x22; placeholder=&#x22;Username&#x22; readonly=&#x22;true&#x22;&#x3E;&#x3C;/g-input&#x3E;</code></pre>
+                            <label>Validation example with no special characters allow message</label>
+                            <pre><code>&#x3C;g-input v-model=&#x22;ValidationExample&#x22; placeholder=&#x22;Username&#x22; pattern=&#x22;^[a-zA-Z0-9]{4,10}$&#x22; validation-message=&#x22;No Special characters allow!&#x22;&#x3E;&#x3C;/g-input&#x3E;</code></pre>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <g-input v-model="changeEventExample" placeholder="Change Event" @change="this.changeEventExample = $event.target.value"></g-input>
+                        </div>
+                        <div class="col-sm-8">
+                            <label>Change event output: {{changeEventExample}}</label>
+                            <pre><code>&#x3C;g-input v-model=&#x22;changeEventExample&#x22; placeholder=&#x22;Change Event&#x22; @change=&#x22;this.changeEventExample = $event.target.value&#x22;&#x3E;&#x3C;/g-input&#x3E;</code></pre>
                         </div>
                     </div>
                 </div>
@@ -67,5 +78,7 @@
 </div>
 
 <script src="build/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

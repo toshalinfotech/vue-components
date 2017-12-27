@@ -13,3 +13,8 @@ body,html{
     padding: $default-spacing*2;
     background: $default-color;
 }
+pre,
+code,
+code.hljs{
+    background: lighten($secondary-color, 10%);
+}

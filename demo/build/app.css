@@ -12,6 +12,11 @@
   padding: 24px;
   background: #fff; }
 
+pre,
+code,
+code.hljs {
+  background: #f4f4f4; }
+
 .g-wrapper {
   margin: 12px 0; }
 
