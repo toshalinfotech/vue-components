@@ -4,7 +4,13 @@
 **Input**
 
 ```html
-<g-input type="text" value="Hello World!"></g-input>
+<g-input v-model="ValidationExample" placeholder="Username" pattern="^[a-zA-Z0-9]{4,10}$" validation-message="No Special characters allow!"></g-input>
+```
+
+**Checkbox**
+
+```html
+<g-checkbox v-model="checkboxExample" value="Milk" required validation-message="Milk is required!">Milk</g-checkbox>
 ```
 
 ## Install
@@ -27,17 +33,18 @@ npm install vue-g-components --save
 Register the plugin.
 
 ```js
-import GInput from 'vue-g-components';
+import GComponents from 'vue-g-components';
 
-Vue.use(GInput);
+Vue.use(GComponents);
 ```
 
 Or register components manually.
 
 ```js
-import {GInput} from 'vue-g-components';
+import {GInput,GCheckbox} from 'vue-g-components';
 
 Vue.component('g-input', GInput);
+Vue.component('g-checkbox', GInput);
 ```
 
 ## Params
@@ -46,7 +53,7 @@ Vue.component('g-input', GInput);
 
 Parameter | Type | Default
 --------- | ---- | ------
-id | `string` | checkbox-id-(element uid)
+id | `string` | input-id-(element uid)
 class-name | `string` | `null`
 name | `string` | `null`
 v-model | `string`, `number` | `null`
@@ -60,6 +67,22 @@ disabled | `boolean` | `false`
 min | `number` | `null`
 max | `number` | `null`
 step | `number` | `null`
+
+
+### Checkbox
+
+Parameter | Type | Default
+--------- | ---- | ------
+id | `string` | checkbox-id-(element uid)
+class-name | `string` | `null`
+name | `string` | `null`
+v-model | `string`, `boolean` or `array` | `undefined`
+value | `string` or `boolean` | `null`
+checked | `boolean` | `false`
+required | `boolean` | `false`
+disabled | `boolean` | `false`
+validation-message | `string` | `null`
+
 
 ## Events
 

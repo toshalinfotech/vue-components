@@ -27,8 +27,7 @@
     &.disabled{
         opacity: 0.5;
     }
-    &.disabled,
-    &.disabled .g-input{
+    &.disabled{
         cursor: not-allowed;
     }
     &.animated .g-label{
@@ -49,21 +48,15 @@
         background: $danger-color;
     }
 }
+
 .g-val-msg{
     font-size: $default-font-size;
     line-height: $default-line-height;
     color: $danger-color;
     text-align: left;
 }
+
 .g-label{
-    position: absolute;
-    bottom: 2px;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-    overflow: hidden;
     font-size: $default-font-size;
     line-height: $default-line-height;
     font-weight: $default-font-weight;
@@ -71,19 +64,82 @@
     text-align: left;
     transition: $default-animation;
 }
-.g-input{
-    display: block;
-    width: 100%;
-    background: transparent;
-    border: none;
-    font-size: $default-font-size;
-    line-height: $default-line-height;
-    font-weight: $default-font-weight;
-    position: relative;
-    box-shadow: none;
-    &:focus,
-    &:hover{
-        outline: none;
+
+.g-input-inner{
+    .g-label{
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .g-input{
+        display: block;
+        width: 100%;
+        background: transparent;
+        border: none;
+        font-size: $default-font-size;
+        line-height: $default-line-height;
+        font-weight: $default-font-weight;
+        position: relative;
         box-shadow: none;
+        &:focus,
+        &:hover{
+            outline: none;
+            box-shadow: none;
+        }
+    }
+    &.disabled .g-input{
+        cursor: not-allowed;
+    }
+}
+
+.g-checkbox-inner{
+    padding: 0;
+    border: none;
+    position: relative;
+    .g-checkbox{
+        display: none;
+    }
+    .g-label{
+        position: relative;
+        margin: 0;
+        padding: 0;
+        vertical-align: top;
+    }
+    .g-svg{
+        margin: 0 $default-spacing/2 0 0;
+        vertical-align: top;
+        border: 2px solid $secondary-color;
+        transition: $default-animation;
+        path{
+            opacity: 0;
+            transition: $default-animation;
+        }
+    }
+    .g-label:hover .g-svg{
+        border-color: $primary-color;
+    }
+    &.invalid{
+        .g-svg,
+        .g-label:hover .g-svg{
+            border-color: $danger-color;
+        }
+    }
+    &.invalid .g-label{
+        color:  $danger-color;
+    }
+    &.disabled .g-label{
+        cursor: not-allowed;
+    }
+    &.checked .g-svg{
+        border-color: $primary-color;
+        background: $primary-color;
+        path{
+            opacity: 1;
+        }
     }
 }

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
-body,html{
+#demoApp{
     padding: 0;
     margin: 0;
     font-family: $default-font-family;
@@ -8,13 +8,14 @@ body,html{
     color: $alternate-color;
     background: lighten($secondary-color, 10%);
 }
-.skArea{
+.skDemo{
     margin: $default-spacing 0;
     padding: $default-spacing*2;
     background: $default-color;
-}
-pre,
-code,
-code.hljs{
-    background: lighten($secondary-color, 10%);
+
+    pre,
+    code,
+    code.hljs{
+        background: lighten($secondary-color, 10%);
+    }
 }

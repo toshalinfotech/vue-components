@@ -1,14 +1,15 @@
 // Vue
 import Vue from 'vue';
-import GInput from '../../src';
+import GComponents from '../../src';
 
-Vue.use(GInput);
+Vue.use(GComponents);
 
 new Vue({
     el: '#app',
 
     data() {
         return {
+            checkboxExample: [],
             inputExample: "",
             placeHolderExample: "",
             disableExample: "toshal.infotech",

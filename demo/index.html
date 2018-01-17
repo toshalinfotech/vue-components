@@ -12,12 +12,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css" />
 </head>
 
-<body>
+<body id="demoApp">
 <div id="app">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="skArea">
+                <div class="skDemo">
+                    <div class="row">
+                            <div class="col-sm-4">
+                                <g-checkbox v-model="checkboxExample" value="Milk" required validation-message="Milk is required!">Milk</g-checkbox>
+                                <g-checkbox v-model="checkboxExample" value="Butter">Butter</g-checkbox>
+                                <g-checkbox v-model="checkboxExample" value="Cheese">Cheese</g-checkbox>
+                            </div>
+                            <div class="col-sm-8">
+                                <label>Checkbox value: {{checkboxExample}}</label>
+                                <pre><code>&#x3C;g-checkbox v-model=&#x22;checkboxExample&#x22; value=&#x22;Milk&#x22; required validation-message=&#x22;Milk is required!&#x22;&#x3E;Milk&#x3C;/g-checkbox&#x3E;
+&#x3C;g-checkbox v-model=&#x22;checkboxExample&#x22; value=&#x22;Butter&#x22;&#x3E;Butter&#x3C;/g-checkbox&#x3E;
+&#x3C;g-checkbox v-model=&#x22;checkboxExample&#x22; value=&#x22;Cheese&#x22;&#x3E;Cheese&#x3C;/g-checkbox&#x3E;</code></pre>
+                            </div>
+                        </div>
+                        <hr/>
                     <div class="row">
                         <div class="col-sm-4">
                             <label></label>

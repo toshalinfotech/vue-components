@@ -5,8 +5,8 @@
 </style>
 
 <template>
-    <div class="g-wrapper" v-if="isValidInput">
-        <div class="g-inner"  :class="[className, {
+    <div class="g-wrapper g-input-wrapper" v-if="isValidInput">
+        <div class="g-inner g-input-inner"  :class="[className, {
                 normal: noLabel,
                 animated: hasValue,
                 disabled: disabled,
