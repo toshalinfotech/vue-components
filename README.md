@@ -44,7 +44,7 @@ Or register components manually.
 import {GInput,GCheckbox} from 'vue-g-components';
 
 Vue.component('g-input', GInput);
-Vue.component('g-checkbox', GInput);
+Vue.component('g-checkbox', GCheckbox);
 ```
 
 ## Params
